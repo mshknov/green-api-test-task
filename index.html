@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="page-header">
+    <h1>GREEN-API</h1>
+    <p>Панель управления WhatsApp API</p>
+</header>
+
+
+<div class="container">
+
+    <!-- ЛЕВАЯ ЧАСТЬ -->
+    <div class="left-panel">
+
+        <!-- Параметры подключения -->
+        <div class="connection-group">
+
+            <input
+                type="text"
+                id="idInstance"
+                placeholder="idInstance"
+            >
+
+            <input
+                type="text"
+                id="apiTokenInstance"
+                placeholder="ApiTokenInstance"
+            >
+
+        </div>
+
+
+        <!-- getSettings -->
+        <div class="method-group">
+
+            <button onclick="callGetSettings()">
+                getSettings
+            </button>
+
+        </div>
+
+
+        <!-- getStateInstance -->
+        <div class="method-group">
+
+            <button onclick="callGetStateInstance()">
+                getStateInstance
+            </button>
+
+        </div>
+
+
+        <!-- sendMessage -->
+        <div class="method-group">
+
+            <input
+                type="text"
+                id="chatId-sendMessage"
+                placeholder="77776665544"
+            >
+
+            <textarea
+                id="message"
+                placeholder="Hello World!"
+            ></textarea>
+
+            <button onclick="callSendMessage()">
+                sendMessage
+            </button>
+
+        </div>
+
+
+        <!-- sendFileByUrl -->
+        <div class="method-group">
+
+            <input
+                type="text"
+                id="chatId-sendFile"
+                placeholder="77776665544"
+            >
+
+            <input
+                type="text"
+                id="urlFile"
+                placeholder="https://my.site.com/img/horse.png"
+            >
+
+            <button onclick="callSendFileByUrl()">
+                sendFileByUrl
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ПРАВАЯ ЧАСТЬ -->
+    <div class="right-panel">
+
+        <div class="response-title">
+            Ответ:
+        </div>
+
+        <textarea
+            id="response"
+            readonly
+        ></textarea>
+
+    </div>
+
+</div>
+
+
+<footer>
+    GREEN API © 2026
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
